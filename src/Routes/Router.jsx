@@ -14,6 +14,7 @@ import DashboardLayout from "../Layaot/DashboardLayout";
 import MyParcel from "../Pages/Dashbord/MyParcel/MyParcel";
 import Payment from "../Pages/Dashbord/Payment/Payment";
 import paymentSucces from "../Pages/Dashbord/Payment/paymentSucces";
+import paymentCancelled from "../Pages/Dashbord/Payment/paymentCancelled";
 
 
 
@@ -83,6 +84,10 @@ export const router=createBrowserRouter([
             {
                 path:'payment-success',
                 Component:paymentSucces
+            },
+            {
+                path:'payment-cancelled',
+                Component: paymentCancelled
             }
         ]
     }
