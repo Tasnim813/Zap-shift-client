@@ -20,6 +20,9 @@ const Navbar = () => {
     <li><NavLink to="/coverage">Coverage</NavLink></li>
     <li><NavLink to="/about">About</NavLink></li>
     <li><NavLink to="/send-percel">Send Percel</NavLink></li>
+    {
+      user && <li><NavLink to="/dashboard/my-parcels">my-parcels</NavLink></li>
+    }
   
   </>
   return (

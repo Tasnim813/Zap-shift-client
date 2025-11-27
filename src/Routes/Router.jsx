@@ -10,6 +10,8 @@ import Register from "../Auth/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
 import Rider from "../Component/Rider/Rider";
 import SendPercel from "../Component/SendPercel/SendPercel";
+import DashboardLayout from "../Layaot/DashboardLayout";
+import MyParcel from "../Pages/Dashbord/MyParcel/MyParcel";
 
 
 
@@ -59,6 +61,18 @@ export const router=createBrowserRouter([
             {
                 path:"register",
                 Component:Register
+            }
+        ]
+    },
+    {
+        path:'dashboard',
+        element:<PrivateRoutes>
+            <DashboardLayout></DashboardLayout>
+        </PrivateRoutes>,
+        children:[
+            {
+                path:'my-parcels',
+                Component:MyParcel
             }
         ]
     }
