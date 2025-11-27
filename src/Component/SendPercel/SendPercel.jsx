@@ -48,6 +48,7 @@ const SendPercel = () => {
         }
 
         console.log('Cost',cost)
+        data.cost=cost
         Swal.fire({
   title: "Are you sure?",
   text: `You will be Charger ${cost} taka `,
@@ -55,18 +56,18 @@ const SendPercel = () => {
   showCancelButton: true,
   confirmButtonColor: "#3085d6",
   cancelButtonColor: "#d33",
-  confirmButtonText: "Yes, delete it!"
+  confirmButtonText: "Yes"
 }).then((result) => {
   if (result.isConfirmed) {
     AxiosSecure.post('/parcels',data)
     .then(res=>{
         console.log('After saving data',res.data)
     })
-    // Swal.fire({
-    //   title: "Deleted!",
-    //   text: "Your file has been deleted.",
-    //   icon: "success"
-    // });
+    Swal.fire({
+      title: "Parcel Success",
+      text: "Your file has been deleted.",
+      icon: "success"
+    });
   }
 });
         

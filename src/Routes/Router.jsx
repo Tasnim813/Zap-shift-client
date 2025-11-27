@@ -12,6 +12,8 @@ import Rider from "../Component/Rider/Rider";
 import SendPercel from "../Component/SendPercel/SendPercel";
 import DashboardLayout from "../Layaot/DashboardLayout";
 import MyParcel from "../Pages/Dashbord/MyParcel/MyParcel";
+import Payment from "../Pages/Dashbord/Payment/Payment";
+import paymentSucces from "../Pages/Dashbord/Payment/paymentSucces";
 
 
 
@@ -73,6 +75,14 @@ export const router=createBrowserRouter([
             {
                 path:'my-parcels',
                 Component:MyParcel
+            },
+            {
+                path:'payment/:parcelId',
+                Component: Payment
+            },
+            {
+                path:'payment-success',
+                Component:paymentSucces
             }
         ]
     }
