@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCreditCard } from 'react-icons/fa';
 import { FaBabyCarriage } from 'react-icons/fa6';
 import { Link, NavLink, Outlet } from 'react-router';
 
@@ -45,12 +46,19 @@ const DashboardLayout = () => {
           </button>
           
         </li>
-         <div className='flex'>
+         <div className='flex ml-2 mt-5'>
             <NavLink  to='/dashboard/my-parcels'  className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Parcel" >
          <FaBabyCarriage />
           
         </NavLink>
         <span className="is-drawer-close:hidden"> My Parcel</span>
+         </div>
+         <div className='flex ml-2 mt-5'>
+            <NavLink  to='/dashboard/payment-history'  className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Payment History" >
+         <FaCreditCard />
+          
+        </NavLink>
+        <span className="is-drawer-close:hidden">Payment History</span>
          </div>
       </ul>
     </div>

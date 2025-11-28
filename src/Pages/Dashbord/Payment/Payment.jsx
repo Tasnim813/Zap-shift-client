@@ -3,10 +3,12 @@ import React from 'react';
 import useAxiosServise from '../../../Hook/useAxiosServise';
 import Loading from '../../Loading/Loading';
 import { useParams } from 'react-router';
+import useAuth from '../../../Hook/useAuth';
 
 const Payment = () => {
     const { parcelId } = useParams();
     const axiosSecure = useAxiosServise();
+    const {user}=useAuth()
 
     const { isLoading, data: parcel } = useQuery({
         queryKey: ['parcels', parcelId],
@@ -19,7 +21,7 @@ const Payment = () => {
         const paymentInfo = {
             cost: parcel.cost,
             parcelId: parcel._id,
-            senderEmail: parcel.SenderEmail,
+            senderEmail: parcel.SenderEmail || parcel.senderEmail|| user.email,
             parcelName: parcel.ParcelName,
         }
 

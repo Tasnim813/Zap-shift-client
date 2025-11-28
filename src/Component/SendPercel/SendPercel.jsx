@@ -9,7 +9,7 @@ const SendPercel = () => {
     const { register, handleSubmit, control } = useForm()
     const { user } = useAuth()
     const AxiosSecure = useAxiosServise()
-const navigate=useNavigate()
+    const navigate = useNavigate()
     const ServiceCenter = useLoaderData()
     console.log(ServiceCenter)
     const regionsDuplicate = ServiceCenter.map(r => r.region)
@@ -60,20 +60,21 @@ const navigate=useNavigate()
         }).then((result) => {
             if (result.isConfirmed) {
                 AxiosSecure.post('/parcels', data)
-                    .then(res => {
-                        console.log('After saving data', res.data)
-                        if (res.data.insertedId) {
-                            navigate('/dashboard/my-parcels')
-                            Swal.fire({
+                    .then(result => {
+                        console.log('After saving data', result.data)
+                       
+                        if (result.data) {
+                                Swal.fire({
                                 position: "top-end",
                                 icon: "success",
                                 title: "Parcel has created Please Pay",
                                 showConfirmButton: false,
-                                timer: 1500
-                            });
-
+                                timer: 2500
+                            }).then(()=>{
+                                 navigate('/dashboard/my-parcels')
+                            })
                         }
-                    })
+                        })
 
             }
         });

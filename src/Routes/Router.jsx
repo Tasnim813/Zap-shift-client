@@ -15,6 +15,8 @@ import MyParcel from "../Pages/Dashbord/MyParcel/MyParcel";
 import Payment from "../Pages/Dashbord/Payment/Payment";
 import paymentSucces from "../Pages/Dashbord/Payment/paymentSucces";
 import paymentCancelled from "../Pages/Dashbord/Payment/paymentCancelled";
+import { Component } from "react";
+import PaymentHistory from "../Pages/Dashbord/PaymentHistory/PaymentHistory";
 
 
 
@@ -88,6 +90,10 @@ export const router=createBrowserRouter([
             {
                 path:'payment-cancelled',
                 Component: paymentCancelled
+            },
+            {
+                path:'payment-history',
+                Component:PaymentHistory
             }
         ]
     }
