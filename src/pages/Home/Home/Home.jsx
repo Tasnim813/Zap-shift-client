@@ -1,6 +1,9 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Brands from '../Brands/Brands';
+import Revewis from '../Revewis/Revewis';
+
+const reveiwsPromise=fetch('./reviews.json').then(res=>res.json())
 
 const Home = () => {
     return (
@@ -8,6 +11,7 @@ const Home = () => {
   
         <Banner></Banner>
         <Brands></Brands>
+        <Revewis reveiwsPromise={reveiwsPromise}></Revewis>
        
         </div>
     );
