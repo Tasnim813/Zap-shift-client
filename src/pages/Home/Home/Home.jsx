@@ -6,6 +6,7 @@ import Card from '../Card/Card';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import ParcelCard from '../ParcelCard/ParcelCard';
 import Stisfiction from '../Stisfication/Stisfiction';
+import Faq from '../Faq/Faq';
 
 const reveiwsPromise=fetch('./reviews.json').then(res=>res.json())
 
@@ -20,7 +21,7 @@ const Home = () => {
         <ParcelCard></ParcelCard>
         <Stisfiction></Stisfiction>
         <Revewis reveiwsPromise={reveiwsPromise}></Revewis>
-       
+       <Faq></Faq>
         </div>
     );
 };
