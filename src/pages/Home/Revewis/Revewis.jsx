@@ -8,10 +8,10 @@ const Revewis = ({reveiwsPromise}) => {
     console.log(reveiws)
     return (
       <div>
-        <div>
-        <h1>Revewis section</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, maxime.</p>
-      </div>
+        <div className=' text-center'>
+        <h1 className='text-4xl font-bold text-secondary'>What our customers are sayings</h1>
+<p className='text-[#606060] text-xl mt-5 mb-10'>Enhance posture, mobility, and well-being effortlessly with Posture Pro. Achieve proper alignment, reduce <br /> pain, and strengthen your body with ease!</p>   
+   </div>
        <Swiper
        loop={true}
         effect={'coverflow'}

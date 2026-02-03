@@ -13,7 +13,11 @@ const brandLogos=[casion,amazon,moonstra,star,starPeople,randstrat
 ];
 const Brands = () => {
     return (
-       <Swiper 
+       <div>
+        <div>
+            <h1 className='text-4xl font-bold text-secondary text-center mb-5'>We've helped thousands of sales teams</h1>
+        </div>
+        <Swiper 
        slidesPerView={4}
         centeredSlides={true}
         spaceBetween={30}
@@ -30,6 +34,7 @@ const Brands = () => {
             brandLogos.map((Logo,index)=><SwiperSlide key={index}  ><img src={Logo} alt="" /></SwiperSlide>)
         }
        </Swiper>
+       </div>
     );
 };
 
