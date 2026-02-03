@@ -13,7 +13,7 @@ const brandLogos=[casion,amazon,moonstra,star,starPeople,randstrat
 ];
 const Brands = () => {
     return (
-       <div>
+       <div className='mb-10'>
         <div>
             <h1 className='text-4xl font-bold text-secondary text-center mb-5'>We've helped thousands of sales teams</h1>
         </div>
