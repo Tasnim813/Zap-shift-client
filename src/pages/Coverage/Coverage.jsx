@@ -21,7 +21,7 @@ const Coverage = () => {
         
     return (
         <div>
-            <h1>We are available in 64 districts</h1>
+            <h1 className='text-4xl font-bold mb-10'>We are available in 64 districts</h1>
             <div>
                 <form onSubmit={handleSearch}>
                     <label className="input">
@@ -38,17 +38,19 @@ const Coverage = () => {
     </g>
   </svg>
   <input type="search" name='location' required placeholder="Search" />
+  <button className='btn btn-primary text-secondary mr-[-15px]'>join</button>
 </label>
                 </form>
 
             </div>
             {/*  */}
-            <div className='border w-full  h-[800px]'>
+            <div className=' w-full  h-[900px] '>
+                <h1 className='text-3xl font-bold mt-10 mb-10'>We deliver almost all over Bangladesh</h1>
                 <MapContainer
                  center={position}
-                  zoom={8}
+                  zoom={10}
       scrollWheelZoom={false}
-      className='h-[800px]'
+      className='h-[900px] border '
       ref={mapRef}
 
       >

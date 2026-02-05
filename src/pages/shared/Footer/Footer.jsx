@@ -4,7 +4,7 @@ import Logo from '../../../Component/Logo/Logo';
 const Footer = () => {
     return (
         <footer className="footer footer-horizontal footer-center bg-black
-          text-primary-content p-10">
+          text-primary-content p-10 ">
   <aside>
    <Logo></Logo>
     <p className="font-bold">
