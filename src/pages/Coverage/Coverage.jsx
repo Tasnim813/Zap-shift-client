@@ -44,13 +44,13 @@ const Coverage = () => {
 
             </div>
             {/*  */}
-            <div className=' w-full  h-[900px] '>
+            <div className=' w-full  h-[800px]  mb-30'>
                 <h1 className='text-3xl font-bold mt-10 mb-10'>We deliver almost all over Bangladesh</h1>
                 <MapContainer
                  center={position}
                   zoom={10}
       scrollWheelZoom={false}
-      className='h-[900px] border '
+      className='h-[800px] border '
       ref={mapRef}
 
       >
