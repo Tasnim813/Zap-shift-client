@@ -32,20 +32,56 @@ const SendParcel = () => {
            </fieldset>
                 <fieldset className="fieldset">
           <label className="label">Parcel Weight (KG)</label>
-          <input type="text" {...register('parcelWeight')} className="input w-full" placeholder="Parcel Weight (KG)" />
+          <input type="Number" {...register('parcelWeight')} className="input w-full" placeholder="Parcel Weight (KG)" />
            </fieldset>
 
             </div>
             {/* two column */}
-            <div>
+            <div  className='grid grid-cols-1 md:grid-cols-2 gap-12'>
                 {/* Sender Info */}
-                <div>
-    
-                </div>
+                
+                   <div>
+                     <h4 className='text-3xl font-bold'>Sender Details</h4>
+                     <fieldset className="fieldset">
+                        {/* sender Name */}
+          <label className="label">Sender Name</label>
+          <input type="text" {...register('senderName')} className="input w-full" placeholder="Sender Name" />
+          {/* sender address */}
+          <label className="label">Sender Address</label>
+          <input type="text" {...register('senderAddress')} className="input w-full" placeholder="Sender Address" />
+          {/* sender districts */}
+          <label className="label">Sender District</label>
+          <input type="text" {...register('senderDistrict')} className="input w-full" placeholder="Sender District" />
+          {/* sender NUmber */}
+          <label className="label">Sender Phone No</label>
+          <input type="text" {...register('senderPhoneNo')} className="input w-full" placeholder="Sender Phone No" />
+          {/* Pickup Instruction*/}
+          <label className="label">Pickup Instruction</label>
+          <input type="text" {...register('PickupInstruction')} className="input w-full" placeholder="Pickup Instruction" />
+           </fieldset> 
+                    </div>  
                 {/* receiver Info */}
-                <div>
-
-                </div>
+                   <div>
+                    <h4 className='text-3xl font-bold'>Receiver Details</h4>
+                    <fieldset className="fieldset">
+                        {/* sender Name */}
+          <label className="label">Sender Name</label>
+          <input type="text" {...register('senderName')} className="input w-full" placeholder="Sender Name" />
+          {/* sender address */}
+          <label className="label">Sender Address</label>
+          <input type="text" {...register('senderAddress')} className="input w-full" placeholder="Sender Address" />
+          {/* sender districts */}
+          <label className="label">Sender District</label>
+          <input type="text" {...register('senderDistrict')} className="input w-full" placeholder="Sender District" />
+          {/* sender NUmber */}
+          <label className="label">Sender Phone No</label>
+          <input type="text" {...register('senderPhoneNo')} className="input w-full" placeholder="Sender Phone No" />
+          {/* Pickup Instruction*/}
+          <label className="label">Pickup Instruction</label>
+          <input type="text" {...register('PickupInstruction')} className="input w-full" placeholder="Pickup Instruction" />
+           </fieldset>
+                   </div>
+                
             </div>
             <input type="submit" className='btn btn-primary text-secondary' value="Submit" />
         </form>
