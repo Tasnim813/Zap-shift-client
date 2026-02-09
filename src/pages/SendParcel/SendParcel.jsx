@@ -32,7 +32,9 @@ const SendParcel = () => {
             <div>
                 {/* Sender Info */}
                 <div>
-
+  <div>
+    Reciver parcel DDED HERE 
+  </div>
                 </div>
                 {/* receiver Info */}
                 <div>
