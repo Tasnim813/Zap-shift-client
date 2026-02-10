@@ -65,8 +65,8 @@ const SendParcel = () => {
                     <h4 className='text-3xl font-bold'>Receiver Details</h4>
                     <fieldset className="fieldset">
                         {/* sender Name */}
-          <label className="label">Sender Name</label>
-          <input type="text" {...register('senderName')} className="input w-full" placeholder="Sender Name" />
+          <label className="label">Receiver Name</label>
+          <input type="text" {...register('receiverName')} className="input w-full" placeholder="Receiver Name" />
           {/* sender address */}
           <label className="label">Sender Address</label>
           <input type="text" {...register('senderAddress')} className="input w-full" placeholder="Sender Address" />
